@@ -22,5 +22,5 @@
 
 ```bash
 $ docker build -t faster-whisper-app .
-$ docker run --gpus all --rm -it -v $(pwd)/audio-files:/root/audio faster-whisper-app python3 infer.py /root/audio/sample.ogg
+$ docker run --gpus all --rm -p 5000:5000 -v $(pwd)/audio-files:/tmp/vm faster-whisper-test
 ```
